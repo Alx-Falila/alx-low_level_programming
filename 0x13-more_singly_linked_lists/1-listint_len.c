@@ -1,24 +1,19 @@
-#include <lists.h>
-#include <stdlib.h>
+#include "lists.h"
 #include <stdio.h>
-
 /**
- * listint_len - return number of nodes.
- *Description: Function that return number of nodes of a single linked list
- * @h: pointer to a structure typedef list_t
- * Return: the number of nodes
- **/
+* listint_len - function that returns the number of elements
+* in a linked listint_t list.
+*@h: header of the list
+*Return: the number of elemets
+*/
 size_t listint_len(const listint_t *h)
 {
-/*temp is a listint_t type. It is a structure*/
-	const listint_t *temp = h;
-	size_t numNodes;
-/*
- * if temp is null, it means it is in the last node. For that reason the
- * condition is: while temp diferent from NULL
- */
-	for (numNodes = 0; temp != NULL; numNodes++)
-		temp = temp->next;
+	size_t count = 0;
 
-	return (numNodes);
+	while (h != NULL)
+	{
+		h = h->next;
+		count++;
+	}
+	return (count);
 }
