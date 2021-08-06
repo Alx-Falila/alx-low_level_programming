@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
 * get_bit - Function that returns the value of a bit al a given index
 *@n: number to check
